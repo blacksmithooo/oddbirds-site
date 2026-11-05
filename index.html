@@ -113,24 +113,6 @@ legend{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:upperc
 .photos figcaption{position:absolute;left:10px;bottom:10px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.9);padding:4px 8px;border-radius:4px}
 .note{font-size:13px;color:var(--mute);margin-top:18px}
 
-/* Shelf */
-.shelf{background:#fff}
-.shelf-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:40px}
-.shelf-head .lead{margin:0;max-width:26em}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.product{background:var(--paper);border-radius:16px;padding:24px;display:flex;flex-direction:column}
-.product .num{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--teal)}
-.product h3{font-size:24px;letter-spacing:-.025em;margin:14px 0 8px}
-.product p{font-size:15px;margin:0;color:#3d3a34;flex:1}
-.product .when{margin-top:18px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-
-/* How */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);margin-top:44px}
-.step{padding:22px 24px 0 0}
-.step .n{font-size:13px;font-weight:600;color:var(--teal)}
-.step h3{font-size:22px;letter-spacing:-.02em;margin:10px 0 8px}
-.step p{font-size:15px;margin:0;color:#3d3a34}
-
 /* Final CTA */
 .final{background:var(--yellow);text-align:center;padding:100px 0}
 .final h2 em{display:block}
@@ -146,15 +128,12 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
   section{padding:72px 0}
   .hero{padding:72px 0 56px}
   .hero-grid,.film-grid,.plush-grid{grid-template-columns:1fr;gap:36px}
-  .products{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr;row-gap:28px}
   .grid{grid-template-columns:repeat(4,1fr)}
   .grid .block{grid-column:1/span 4;grid-row:3/span 2}
 }
 @media (max-width:560px){
   .wrap{padding:0 16px}
   .top .hide-sm{display:none}
-  .products,.steps{grid-template-columns:1fr}
   .card{padding:22px}
   .stats{gap:28px}
   .stat b{font-size:36px}
@@ -178,20 +157,19 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
       <div>
         <p class="kicker">A flock of one-of-a-kind birds</p>
         <h1>Get your bird <em>before anyone else.</em></h1>
-        <p class="lead">Oddbirds is a short, wordless comedy about a flock of handmade birds: felt, yarn, real feathers, zero common sense. Soon you'll be able to take one home.</p>
-        <p class="tag">We only make what people ask for. The waitlist is how you ask.</p>
+        <p class="lead">A wordless comedy about a flock of handmade birds. Join the waitlist to hear first if they ever leave the screen.</p>
       </div>
       <div class="card" id="join">
         <form class="waitlist" novalidate>
           <h3>Join the waitlist</h3>
-          <p class="sub">Free. First dibs when preorders open, and nothing else in between.</p>
+          <p class="sub">Free. We only email if there's something to get first.</p>
           <fieldset>
             <legend>I'd want</legend>
             <div class="chips">
               <label class="chip"><input type="checkbox" name="interests" value="Plush" checked><span>A plush bird</span></label>
-              <label class="chip"><input type="checkbox" name="interests" value="Card game"><span>The card game</span></label>
-              <label class="chip"><input type="checkbox" name="interests" value="Egg packs"><span>Egg card packs</span></label>
-              <label class="chip"><input type="checkbox" name="interests" value="Personalized film"><span>A film for someone</span></label>
+              <label class="chip"><input type="checkbox" name="interests" value="Card game"><span>A card game</span></label>
+              <label class="chip"><input type="checkbox" name="interests" value="Egg packs"><span>Collectible cards</span></label>
+              <label class="chip"><input type="checkbox" name="interests" value="Personalized film"><span>A custom film</span></label>
             </div>
           </fieldset>
           <div class="field">
@@ -199,7 +177,7 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
             <input type="email" name="email_address" placeholder="you@email.com" autocomplete="email" required aria-label="Email address">
             <button type="submit">Count me in</button>
           </div>
-          <p class="fine">One email when it's ready. Unsubscribe any time. <a href="privacy.html#waitlist">Privacy</a>.</p>
+          <p class="fine">Unsubscribe any time. <a href="privacy.html#waitlist">Privacy</a>.</p>
           <div class="msg" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -212,7 +190,7 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
     <div>
       <p class="kicker">The show</p>
       <h2>Fifteen seconds. <em>No words needed.</em></h2>
-      <p class="lead" style="margin-top:18px">Every film is a single gag: a setup, a payoff, and a bird staring straight at you like it was your fault. It plays the same in every language.</p>
+      <p class="lead" style="margin-top:18px">One gag, one bird, no words. It plays the same in every language.</p>
       <div class="stats">
         <div class="stat"><b>1,006</b><span>birds in the flock</span></div>
         <div class="stat"><b>0</b><span>words spoken</span></div>
@@ -265,10 +243,10 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
 <section class="plush">
   <div class="wrap plush-grid">
     <div>
-      <p class="kicker">Plush, in real life</p>
-      <h2>Bird #229, <em>off the screen and into the room.</em></h2>
-      <p class="lead" style="margin-top:18px">Soft bodies, stitched glasses, embroidered eyes. The birds were designed like soft toys before anyone asked for one. Now people are asking.</p>
-      <p class="note">These are photoreal mockups made from the original bird design, not a manufactured sample. Yet.</p>
+      <p class="kicker">Maybe, one day</p>
+      <h2>Bird #229, <em>off the screen and onto your shelf?</em></h2>
+      <p class="lead" style="margin-top:18px">If enough people want one, the birds could become real plush toys. The waitlist is how we find out.</p>
+      <p class="note">Mockups, not a real product. Yet.</p>
     </div>
     <div class="photos">
       <figure><img src="img/plush-bed.jpg" alt="Bird #229 as a plush toy on a child's bed" loading="lazy"><figcaption>Bedtime</figcaption></figure>
@@ -279,64 +257,13 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="shelf">
-  <div class="wrap">
-    <div class="shelf-head">
-      <div>
-        <p class="kicker">What could be on the shelf</p>
-        <h2>Pick what we <em>make first.</em></h2>
-      </div>
-      <p class="lead">Tick the things you'd want when you join. The most-wanted ones get made first.</p>
-    </div>
-    <div class="products">
-      <div class="product">
-        <span class="num">01</span>
-        <h3>Plush birds</h3>
-        <p>Your favorite bird from the films, as a soft toy. Felt-look body, stitched glasses, yarn legs.</p>
-        <span class="when">First up</span>
-      </div>
-      <div class="product">
-        <span class="num">02</span>
-        <h3>Odd One Out</h3>
-        <p>A card game. Someone reads “Which bird would be worst at a job interview?” and everyone plays the bird that fits. Funniest answer wins.</p>
-        <span class="when">In the works</span>
-      </div>
-      <div class="product">
-        <span class="num">03</span>
-        <h3>Hatch a Pack</h3>
-        <p>Collectible bird cards that come in an egg you crack open. The rarest ones are fuzzy and have a real googly eye.</p>
-        <span class="when">In the works</span>
-      </div>
-      <div class="product">
-        <span class="num">04</span>
-        <h3>A film for someone</h3>
-        <p>A custom ten-second Oddbirds film for a birthday, a wedding or a baby announcement. Wordless, of course.</p>
-        <span class="when">Soon</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="how">
-  <div class="wrap">
-    <p class="kicker">How it works</p>
-    <h2>We never make anything <em>nobody asked for.</em></h2>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><h3>Join the waitlist</h3><p>Free, and you tell us what you'd want. No payment, no commitment.</p></div>
-      <div class="step"><span class="n">02</span><h3>Preorders open</h3><p>When enough people want something, you get first dibs to preorder it.</p></div>
-      <div class="step"><span class="n">03</span><h3>We make exactly that many</h3><p>No warehouse full of guesses. Every bird made has a home waiting.</p></div>
-      <div class="step"><span class="n">04</span><h3>It lands at your door</h3><p>And the unboxings end up back in the show.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="final">
   <div class="wrap">
     <h2>Let's make them <em>famous.</em></h2>
     <div class="card">
       <form class="waitlist" novalidate>
         <h3>Save me a bird</h3>
-        <p class="sub">One email when preorders open.</p>
+        <p class="sub">Be the first to know.</p>
         <input type="hidden" name="interests" value="Plush">
         <div class="field">
           <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
